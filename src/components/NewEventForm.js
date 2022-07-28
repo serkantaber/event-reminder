@@ -33,11 +33,11 @@ export default function NewEventForm({ addEvent }) {
     <form className="new-event-form" onSubmit={handleSubmit}>
       <label>
         <span>Event Title:</span>
-        <input type="text" onChange={(e) => setTitle(e.target.value)} value={title} />
+        <input type="text" onChange={(e) => setTitle(e.target.value)} value={title} required/>
       </label>
       <label>
         <span>Event Date:</span>
-        <input type="date" onChange={(e) => setDate(e.target.value)} value={date} />
+        <input type="date" onChange={(e) => setDate(e.target.value)} value={date} required/>
       </label>
       <label>
         <span>Event Location:</span>
@@ -48,7 +48,7 @@ export default function NewEventForm({ addEvent }) {
           <option value="İzmir">İzmir</option>
         </select>
       </label>
-      <button>Submit</button>
+      <button>Submit</button>      
     </form>
   )
 }

@@ -18,6 +18,10 @@ function App() {
     setShowModal(false)
   }
 
+  const handleClose = () => {
+    setShowModal(false);
+  }
+
   const handleClick = (id) => {
     setEvents((prevEvents) => {
       return prevEvents.filter((eventID) => {
@@ -48,7 +52,7 @@ function App() {
 
       </EventList>}
 
-      {showModal && <Modal>
+      {showModal && <Modal handleClose={handleClose}>
         <NewEventForm addEvent={addEvent} />
       </Modal>}
       
